@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+    <style>
+
+        body {
+            font-family: "Playfair Display";
+            background-image: url("/images/background-image-1.jpg"), url("/images/bottombackground-1.jpg");
+            background-position: top, bottom;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 50px;
+            max-width: 1024px;
+            margin: auto;
+        }
+
+            h1:after {
+                content: "";
+                display: block;
+                max-width: 1024px;
+                width: 70%;
+                border-bottom: 2px solid white;
+                padding-top: 10px;
+                margin: auto;
+            }
+
+        h2 {
+            font-size: 25px;
+            color: #2969b0;
+        }
+
+            h2:before {
+                content: "";
+                display: block;
+                width: 40px;
+                border-top: 2px solid #a6dde0;
+            }
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        .connect {
+            font-size: 30px;
+            color: white;
+        }
+
+        .whitetext {
+            text-align: center;
+            color: white;
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        .whitetextbottom {
+            text-align: center;
+            color: white;
+            max-width: 1024px;
+            margin: auto;
+            padding-bottom: 75px;
+        }
+
+        .maincontent {
+            max-width: 1024px;
+            margin: auto;
+            line-height: 2;
+        }
+
+        ul.bluelist {
+            list-style: none;
+            line-height: 2;
+        }
+
+            ul.bluelist li::before {
+                content: "\203A \0020";
+                color: #a6dde0;
+            }
+
+        ul.footerlist {
+            display: flex;
+            float: right;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+
+            ul.footerlist li::after {
+                padding-left: 5px;
+                padding-right: 5px;
+                content: "\007C \0020";
+                color: white;
+            }
+
+            ul.footerlist li {
+                color: white;
+                list-style-type: none;
+            }
+
+            ul.footerlist a {
+                text-decoration: none;
+                color: white;
+            }
+
+        #footlink {
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: #353535;
+            background-size: cover;
+            width: 100%;
+            color: white;
+            height: 100px;
+        }
+
+        .insidefoot {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        .bottomlogo {
+            padding-top: 20px;
+            float: left;
+        }
+
+        .spacer {
+            padding: 65px;
+        }
+
+        input[type=text] {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            color: white;
+        }
+
+            input[type=text].search {
+                width: 100%;
+                color: black;
+                padding: 5px;
+            }
+
+        input[type=submit] {
+            width: 10%;
+            background-color: #a6dde0;
+            font-size: 9px;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+        }
+
+            input[type=submit]:hover {
+                background-color: #2969b0;
+            }
+
+        .bottom {
+            color: white;
+            width: 40%;
+            float: left;
+            font-size: 14px;
+        }
+
+        .nav {
+            overflow: hidden;
+            color: white;
+            max-width: 1024px;
+            margin: auto;
+        }
+
+            .nav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 8px 10px;
+                text-decoration: none;
+                font-size: 11px;
+                margin-top: 25px;
+            }
+
+        #logo {
+            margin-top: 5px;
+        }
+
+        .emailsafe {
+            padding-right: 29%;
+            color: white;
+            font-size: 10px;
+        }
+
+        .nav .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 11px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 8px 10px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+                margin-top: 15px;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #262626;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .nav .reg:hover, .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+            border-bottom: 2px solid #a6dde0;
+        }
+
+        .nav .droppic:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .nav .leesa {
+            background-image: url("/images/lessa1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 93px;
+         
+        }
+
+            .nav .leesa:hover {
+                background-image: url("/images/leesa2.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 150px;
+                height: 93px;
+            }
+
+        .nav .purple {
+            background-image: url("/images/purple1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 93px;
+        }
+
+        .nav .purple:hover {
+            background-image: url("/images/purple2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 93px;
+        }
+
+        .nav .nest {
+            background-image: url("/images/nest1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 93px;
+        }
+
+            .nav .nest:hover {
+                background-image: url("/images/nest2.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 150px;
+                height: 93px;
+            }
+
+        .nav .bear {
+            background-image: url("/images/bear1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 93px;
+        }
+
+            .nav .bear:hover {
+                background-image: url("/images/bear2.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 150px;
+                height: 93px;
+            }
+
+
+
+        .copyright {
+            color: white;
+            background-color: #353535;
+            float: right;
+            padding-right: 37%;
+            font-size: 8px
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-image: url("/images/background-image-1.jpg"), url("/images/mobile-bg.jpg");
+                background-position: top, bottom;
+                background-repeat: no-repeat;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            ul.footerlist li::after {
+                list-style-type: none;
+                list-style: none;
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer {
+                background-color: #353535;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .emailsafe {
+                float: right;
+                padding-right: 0px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .copyright {
+                margin: auto;
+                padding-bottom: 20px;
+                padding-left: 150px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            ul.footerlist {
+                background-color: #353535;
+                text-align: center;
+                list-style-type: none;
+                width: 100%;
+                display: inline-block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .connect {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .spacer {
+                padding: 60px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .bottomlogo {
+                background-color: #353535;
+                background-size: 100%;
+                margin: auto;
+                padding-left: 22%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .bottom, input[type=text] {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            input[type=submit] {
+                width: 30%;
+                float: left;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .whitetext {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .whitetextbottom {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+            }
+
+            .nav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav.responsive {
+                position: relative;
+                background-color: #464137;
+            }
+
+                .nav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: #464137;
+                }
+
+                .nav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                    background-color: #464137;
+                }
+
+                .nav.responsive .dropdown {
+                    float: none;
+                    background-color: #464137;
+                }
+
+                .nav.responsive .dropdown-content {
+                    position: relative;
+                    background-color: #464137;
+                }
+
+                .nav.responsive .dropdown .dropbtn {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    background-color: #464137;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav" id="thenav">
+        <a href="" id="logo"><img src="/images/logo.png" alt="Best Mattress" /></a>
+        <a class="reg" href="">About Us</a>
+        <div style="padding-top: 10px" class="dropdown">
+            <button class="dropbtn">
+                Mattress Reviews
+            </button>
+            <div class="dropdown-content">
+                <a class="leesa" style="float:left" href=""></a>
+                <a class="purple" style="float:right" href=""></a>
+                <br />
+                <a class="nest" style="float:left" href=""></a>
+                <a class="bear" style="float:right" href=""></a>
+            </div>
+        </div>
+        <div style="padding-top: 10px" class="dropdown">
+            <button class="dropbtn">
+                Best Mattresses
+            </button>
+            <div class="dropdown-content">
+                <a class="leesa" style="float:left" href=""></a>
+                <a class="purple" style="float:right" href=""></a>
+                <br />
+                <a class="nest" style="float:left" href=""></a>
+                <a class="bear" style="float:right" href=""></a>
+            </div>
+        </div>
+        <a class="reg" href="">Accessories</a>
+        <a class="reg" href="">Blog/Industry News</a>
+        <a class="reg" href="">Promotions</a>
+        <a class="reg" href="">Contact Us</a>
+        <div style="padding-top: 5px" class="dropdown">
+            <button class="dropbtn">
+                <i id="searchlogo" class="fa fa-search" style="background-color: #a6dde1; padding: 10px 10px;"></i>
+            </button>
+            <div class="dropdown-content">
+                <input type="text" class="search" placeholder="Search..">
+            </div>
+        </div>
+        <a href="javascript:void(0);" style="font-size:35px; color: #a6dde0;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <h1>Privacy Policy</h1>
+    <br />
+    <p class="whitetext">
+        Privacy is an important issue to us at BestMatresses.net. We are commited to protecting the privacy of our users and we have procedures in place to ensure
+        that any information we collect from them is handled appropriately.
+    </p>
+    <br />
+    <p class="whitetextbottom">The following privacy policy details what information we collect and how it is used. It forms part of our <a href="">Term of Use</a>.</p>
+    <div class="maincontent">
+        <h2>1. Definitions</h2>
+        <ul class="bluelist">
+            <li>"Site" refers to the website found at www.BestMattresses.net.</li>
+            <li>"Owners" refers to the owners of the Site.</li>
+            <li>"User" refers to any individual, company, corporation, or other organization visting and/or using the site</li>
+            <li>"Policy" refers to the privacy policy found on this page.</li>
+        </ul>
+        <h2>2. Execption</h2>
+        <p>This Policy relates solely to the Site and not to any external websites that are linked from the Site.</p>
+        <h2>3. Owner Committment</h2>
+        <p>The Owners will take all reasonable steps to protect the privacy of Users of the Site and any information that is collected from them.</p>
+        <h2>4.Types of Information Collected</h2>
+        <p>Information collected from Users visting and/or using the Site is classed as non-personal information or personal information.</p>
+        <h3><strong>NON-PERSONAL INFORMATION</strong></h3>
+        <p>This information may be collected automatically when any user visit and/or uses the Site. It includes:</p>
+        <ul class="bluelist">
+            <li>Web browser being user</li>
+            <li>Type of computer being used</li>
+            <li>Domain being used</li>
+            <li>Date of use</li>
+            <li>Time of use</li>
+            <li>Various other technical information</li>
+        </ul>
+        <h3><strong>Personal Information</strong></h3>
+        <p>This information is only collect if a User provides it voluntarily via email, completion of a submission form or contacting the Site in any other way.</p>
+        <p>It includes:</p>
+        <ul class="bluelist">
+            <li>Name</li>
+            <li>Email Address</li>
+            <li>Any other information provided voluntarily</li>
+        </ul>
+        <h2>5. Use of Non-Personal Information</h2>
+        <p>Non-personal information may be stored and used collectively for purposes of analyzing traffic that is visiting and/or using the site. When the information is stored it is not specifically linked to any individual User.</p>
+        <h2>6. Use of Personal Information</h2>
+        <p>Non-personal information may be stored and used collectively for purposes of analyzing traffic that is visiting and/or using the site. When the information is stored it is not specifically linked to any individual User.</p>
+        <h2>7. Use of Cookies</h2>
+        <p>The Site may set cookies and your computer and access them for the purposes of tracking traffic to and from the Site.</p>
+        <h2>8. Amending the Policy</h2>
+        <p>The Owners, or any third-party acting on instructions from the owners may amend this Policy at any time without providing prior notice.</p>
+        <h2>9. Acceptance of the Policy</h2>
+        <p>Visiting and/or using this Site constitutes acceptance of the terms of this Policy by any User.</p>
+        <div class="spacer"></div>
+        <p class="connect">Stay Connected</p>
+        <p class="bottom">Lorem ipsum dolor sit amet, vim ei cetero saperet dignissim, in vitae everti vis. Ne novum propriae patrioque sit. Inani albucius vel at. Choro dictas periculis his ei.</p>
+        <form align="right">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Your Email Address">
+            <input type="submit" value="Get Started">
+            <p class="emailsafe">Your Email is Safe with us</p>
+        </form>
+    </div>
+    <br clear="all" />
+    <div class="spacer"></div>
+    <div class="footer">
+        <div class="insidefoot">
+            <img class="bottomlogo" src="/images/logo.png" alt="Best Mattress" />
+
+            <ul class="footerlist">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Mattress Review</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <a href="">Privacy Policy</a>
+            </ul>
+            <br clear="all" />
+            <p class="copyright">Copyright &#9400; 2018 BestMattresses.net. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function myFunction() {
+        var x = document.getElementById("thenav");
+        if (x.className === "nav") {
+            x.className += " responsive";
+        } else {
+            x.className = "nav";
+        }
+    }
+</script>
